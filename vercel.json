@@ -1,0 +1,10 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "regions": ["cdg1"],
+  "functions": {
+    "api/binance.js": {
+      "regions": ["cdg1"],
+      "maxDuration": 30
+    }
+  }
+}

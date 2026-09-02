@@ -27,11 +27,6 @@ jobs:
         with:
           node-version: 22
       - run: node scripts/update-history.mjs
-      - name: Update Backpack / Binance Sheet
-        env:
-          SHEET_WEB_APP_URL: ${{ secrets.SHEET_WEB_APP_URL }}
-          SHEET_WEB_APP_SECRET: ${{ secrets.SHEET_WEB_APP_SECRET }}
-        run: node scripts/update-sheet.mjs
       - name: Commit refreshed cache
         run: |
           git config user.name "github-actions[bot]"
